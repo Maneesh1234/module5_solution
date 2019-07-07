@@ -31,7 +31,7 @@ ajaxUtils.sendGetRequest =
                        isJsonResponse); 
       };
     request.open("GET", requestUrl, true);
-    //request.send(null); // for POST only
+    request.send(null); // for POST only
   };
 
 
@@ -46,7 +46,7 @@ function handleResponse(request,
 
     // Default to isJsonResponse = true
     if (isJsonResponse == undefined) {
-      isJsonResponse = false;
+      isJsonResponse = true;
     }
 
     if (isJsonResponse) {
